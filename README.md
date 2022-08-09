@@ -1,6 +1,19 @@
 # Laravel CMS using Vanilla PHP Views
 
-This repository is copy of the simple [PHP CMS](https://github.com/codeadamca/php-cms) except the CMS has been converted to Laravel. 
+This repository is a simple CMS using Laravel and W3.CSS. The code consists of a login, a dashboard, a place to view/add/edit/delete users, and a place to view/add/edit/delete content.
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Contribution</th>
+    </tr>
+    <tr>
+        <td>Ravi Dhingra</td>
+        <td>Social-Media, CRUD functionality</td>
+     </tr>
+     
+ </table>
+
 
 A few notes regarding the CMS:
 
