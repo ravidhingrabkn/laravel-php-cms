@@ -3,6 +3,7 @@
 use App\Models\Project;
 use App\Http\Controllers\ConsoleController;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\SocialsController;
 use App\Http\Controllers\TypesController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -43,6 +44,14 @@ Route::post('/console/projects/edit/{project:id}', [ProjectsController::class, '
 Route::get('/console/projects/delete/{project:id}', [ProjectsController::class, 'delete'])->where('project', '[0-9]+')->middleware('auth');
 Route::get('/console/projects/image/{project:id}', [ProjectsController::class, 'imageForm'])->where('project', '[0-9]+')->middleware('auth');
 Route::post('/console/projects/image/{project:id}', [ProjectsController::class, 'image'])->where('project', '[0-9]+')->middleware('auth');
+
+Route::get('/console/socials/list', [SocialsController::class, 'list'])->middleware('auth');
+Route::get('/console/socials/delete/{social:id}', [SocialsController::class, 'delete'])->where('social', '[0-9]+')->middleware('auth');
+Route::get('/console/socials/add', [SocialsController::class, 'addForm'])->middleware('auth');
+Route::post('/console/socials/add', [SocialsController::class, 'add'])->middleware('auth');
+Route::get('/console/socials/edit/{social:id}', [SocialsController::class, 'editForm'])->where('type', '[0-9]+')->middleware('auth');
+Route::post('/console/socials/edit/{social:id}', [SocialsController::class, 'edit'])->where('type', '[0-9]+')->middleware('auth');
+
 
 Route::get('/console/users/list', [UsersController::class, 'list'])->middleware('auth');
 Route::get('/console/users/add', [UsersController::class, 'addForm'])->middleware('auth');

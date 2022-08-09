@@ -7,7 +7,7 @@
         <title>My Portfolio</title>
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="/app.css">
+        <link rel="stylesheet" href="/login.css">
 
         <script src="/app.js"></script>
         
@@ -17,7 +17,7 @@
 
         <header class="w3-padding">
 
-            <h1 class="w3-text-red">Portfolio Console</h1>
+            
 
             <a href="/">Return to My Portfolio</a>
 
@@ -25,15 +25,16 @@
 
         <hr>
 
-        <section class="w3-padding">
+        <div class="w3-padding container">
 
             <form method="post" action="/console/login" novalidate>
+            <h1 class="w3-text-red">Portfolio Console</h1>
 
                 <?= csrf_field() ?>
 
-                <div class="w3-margin-bottom">
+                <div class="w3-margin-bottom form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" name="email" id="email" value="<?= old('email') ?>" required>
+                    <input type="email" class="form-control" name="email" id="email" value="<?= old('email') ?>" required>
                     
                     <?php if($errors->first('email')): ?>
                         <br>
@@ -43,7 +44,7 @@
 
                 <div class="w3-margin-bottom">
                     <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" class="form-control" id="password" required>
 
                     <?php if($errors->first('password')): ?>
                         <br>
@@ -51,11 +52,11 @@
                     <?php endif; ?>
                 </div>
 
-                <button type="submit">Log In</button>
+                <button type="submit" class="btn">Log In</button>
 
             </form>
 
-        </section>
+                    </div>
 
     </body>
 </html>

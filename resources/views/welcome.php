@@ -73,9 +73,9 @@
     <h2 class="w3-text-blue">Contact Me</h2>
 
     <p>
-        Phone: 111.222.3333
+        Phone: 647.425.5134
         <br>
-        Email: <a href="mailto:email@address.com">email@address.com</a>
+        Email: <a href="mailto:ravidhingrabkn@outlook.com">ravidhingrabkn@outlook.com</a>
     </p>
 
 </section>
