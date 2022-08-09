@@ -1,6 +1,6 @@
 # Laravel CMS using Vanilla PHP Views
 
-This repository is a simple CMS using Laravel and W3.CSS. The code consists of a login, a dashboard, a place to view/add/edit/delete users, and a place to view/add/edit/delete content.
+This repository is a simple CMS using Laravel and W3.CSS. The code consists of a login, a dashboard, a place to view/add/edit/delete users, and a place to view/add/edit/delete projects.
 
 <table>
     <tr>
