@@ -7,6 +7,7 @@ use App\Models\Type;
 use App\Models\User;
 use App\Models\Project;
 use App\Models\Social;
+use App\Models\Skill;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,12 @@ Route::get('/socials', function(){
 
     $socials = Social::orderBy('title')->get();
     return $socials;
+
+});
+Route::get('/skills', function(){
+
+    $skills = Skill::orderBy('title')->get();
+    return $skills;
 
 });
 
