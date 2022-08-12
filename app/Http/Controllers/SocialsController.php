@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 use App\Models\Social;
 
 class SocialsController extends Controller
@@ -65,6 +67,30 @@ class SocialsController extends Controller
 
         return redirect('/console/socials/list')
              ->with('message', 'Social has been edited.');
+    }
+    public function imageForm(Social $social)
+    {
+        return view('socials.image', [
+            'social' => $social,
+        ]);
+    }
+
+    public function image(Social $social)
+    {
+
+        $attributes = request()->validate([
+            'image' => 'required|image',
+        ]);
+
+        Storage::delete($social->image);
+        
+        $path = request()->file('image')->store('socials');
+
+        $social->image = $path;
+        $social->save();
+        
+        return redirect('/console/socials/list')
+            ->with('message', 'Social image has been edited!');
     }
 
 

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Type;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\Social;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,12 @@ Route::get('/types', function(){
 
     $types = Type::orderBy('title')->get();
     return $types;
+
+});
+Route::get('/socials', function(){
+
+    $socials = Social::orderBy('title')->get();
+    return $socials;
 
 });
 

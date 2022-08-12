@@ -30,7 +30,7 @@
         </header>
 
         <hr>
-        
+
         <?php if(session()->has('message')): ?>
             <div class="w3-padding w3-margin-top w3-margin-bottom">
                 <div class="w3-red w3-center w3-padding"><?= session()->get('message') ?></div>
@@ -38,10 +38,12 @@
         <?php endif; ?>
 
         <section class="w3-padding">
-            <h2>Manage Socials</h2>
+
+            <h2>Manage Skills</h2>
+
             <table class="w3-table w3-stripped w3-bordered w3-margin-bottom">
                 <tr class="w3-red">
-                <th></th>
+                    <th></th>
                     <th>Title</th>
                     <th>URL</th>
                     <th>Created</th>
@@ -49,24 +51,25 @@
                     <th></th>
                     <th></th>
                 </tr>
-            
-                <?php foreach($socials as $social): ?>
+                <?php foreach($skills as $skill): ?>
                     <tr>
                         <td>
-                            <?php if($social->image): ?>
-                                <img src="<?= asset('storage/'.$social->image) ?>" width="200">
+                            <?php if($skill->image): ?>
+                                <img src="<?= asset('storage/'.$skill->image) ?>" width="200">
                             <?php endif; ?>
                         </td>
-                        <td><?= $social->title ?></td>                        
-                        <td><?= $social->url ?></td>                        
-                        <td><?= $social->created_at->format('M j, Y') ?></td>
-                        <td><a href="/console/socials/image/<?= $social->id ?>">Image</a></td>
-                        <td><a href="/console/socials/edit/<?= $social->id ?>">Edit</a></td>
-                        <td><a href="/console/socials/delete/<?= $social->id ?>">Delete</a></td>
+                        <td><?= $skill->title ?></td>                        
+                        <td><?= $skill->url ?></td>                        
+                        <td><?= $skill->created_at->format('M j, Y') ?></td>
+                        <td><a href="/console/skills/image/<?= $skill->id ?>">Image</a></td>
+                        <td><a href="/console/skills/edit/<?= $skill->id ?>">Edit</a></td>
+                        <td><a href="/console/skills/delete/<?= $skill->id ?>">Delete</a></td>
                     </tr>
                 <?php endforeach; ?>
-                </table>
-            <a href="/console/socials/add" class="w3-button w3-green">New Socials</a>
+            </table>
+
+            <a href="/console/skills/add" class="w3-button w3-green">New Skill</a>
+
         </section>
 
     </body>
