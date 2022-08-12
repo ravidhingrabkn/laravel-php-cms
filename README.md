@@ -11,6 +11,10 @@ This repository is a simple CMS using Laravel and W3.CSS. The code consists of a
         <td>Ravi Dhingra</td>
         <td>Social-Media, CRUD functionality</td>
      </tr>
+     <tr>
+        <td>Ravi Dhingra</td>
+        <td>Skills, CRUD functionality</td>
+     </tr>
      
  </table>
 
